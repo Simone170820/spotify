@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Musica di Simo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra Laterale -->
+    <div id="sidebar">
+        <div id="logo">Musica di Simo</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Cerca</a></li>
+            <li><a href="playlist.html">Playlist</a></li>
+            <li><a href="library.html">Libreria</a></li>
+            <li><a href="settings.html">Impostazioni</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenuto Principale -->
+    <div id="content">
+        <!-- Animazione Logo -->
+        <div id="home-header">
+            <h1>Musica di Simo</h1>
+            <p class="tagline">La tua musica, il tuo mondo</p>
+            <div id="logo-animation">
+                <span>Benvenuto nella tua musica personale!</span>
+            </div>
+        </div>
+
+        <!-- Sezione Musica -->
+        <div id="music-section">
+            <h2>Le tue Canzoni</h2>
+            <div id="music-grid">
+                <div class="music-item" onclick="showSongDetails('Song Title 1', 'song1.jpg', 'assets/music/song1.mp3')">
+                    <img src="/imagini/https___images.genius.com_4a0d653fc7c5b0ddf1821b88adb2fe4e.1000x1000x1.jpg" alt="Album 1">
+                    <p>adios</p>
+                </div>
+                <div class="music-item" onclick="showSongDetails('Song Title 2', 'song2.jpg', 'assets/music/song2.mp3')">
+                    <img src="song2.jpg" alt="Album 2">
+                    <p>Song Title 2</p>
+                </div>
+                <!-- Aggiungi altre canzoni qui -->
+            </div>
+        </div>
+
+        <!-- Dettagli Canzone Selezionata -->
+        <div id="song-details" style="display: none;">
+            <div id="song-info">
+                <img id="song-image" src="" alt="Canzone">
+                <h3 id="song-title"></h3>
+                <audio id="audio-player" src="" controls></audio>
+                <button id="play-button">Play</button>
+                <button id="pause-button">Pause</button>
+            </div>
+        </div>
+
+        <!-- Sezione Playlist -->
+        <div id="playlist-section">
+            <h2>Le tue Playlist</h2>
+            <div id="playlist-grid">
+                <div class="playlist-item" onclick="showPlaylistDetails('Playlist 1', 'playlist1.jpg')">
+                    <img src="playlist1.jpg" alt="Playlist 1">
+                    <p>Playlist 1</p>
+                </div>
+                <!-- Aggiungi altre playlist qui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
